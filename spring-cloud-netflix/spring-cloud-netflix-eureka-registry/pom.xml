@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>spring-cloud-netflix-eureka-registry</artifactId>
   <name>Spring Cloud Netflix Eureka Registry</name>
-  <url>https://bitbucket.org/unmacaque/spring</url>
+  <url>https://bitbucket.org/unmacaque/spring-cloud</url>
   <packaging>jar</packaging>
 
   <parent>
