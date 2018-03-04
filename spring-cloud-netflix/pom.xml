@@ -14,7 +14,6 @@
   </parent>
 
   <modules>
-    <module>spring-cloud-netflix-eureka-feign</module>
     <module>spring-cloud-netflix-eureka-registry</module>
     <module>spring-cloud-netflix-eureka-service</module>
     <module>spring-cloud-netflix-zuul</module>
