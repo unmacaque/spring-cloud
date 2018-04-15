@@ -23,6 +23,7 @@
   <modules>
     <module>spring-cloud-config</module>
     <module>spring-cloud-netflix</module>
+    <module>spring-cloud-openfeign</module>
   </modules>
 
   <dependencyManagement>

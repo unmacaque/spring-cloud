@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: openfeign-client
+
+feign:
+  hystrix:
+    enabled: true
