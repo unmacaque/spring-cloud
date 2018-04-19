@@ -15,5 +15,6 @@
 
   <modules>
     <module>spring-cloud-stream-kafka</module>
+    <module>spring-cloud-stream-reactive</module>
   </modules>
 </project>
