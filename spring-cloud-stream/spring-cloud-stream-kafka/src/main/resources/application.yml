@@ -3,7 +3,10 @@ spring:
     stream:
       bindings:
         input:
+          destination: unfiltered
           group: group1
+        output:
+          destination: filtered
 
 logging:
   level:
