@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: unfiltered
+          group: group1
+        output:
+          destination: filtered
+      function:
+        definition: uppercase
+
+logging:
+  level:
+    org.apache.kafka.clients: warn
