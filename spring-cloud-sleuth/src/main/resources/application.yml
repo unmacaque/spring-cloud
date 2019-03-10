@@ -1,0 +1,4 @@
+spring:
+  zipkin:
+    service:
+      name: spring-cloud-sleuth
