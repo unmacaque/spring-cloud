@@ -1,9 +1,9 @@
 package com.gmail.unmacaque.spring.domain;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Collections;
 import java.util.List;
-
-import org.springframework.stereotype.Component;
 
 @Component
 class ProductClientFallback implements ProductClient {

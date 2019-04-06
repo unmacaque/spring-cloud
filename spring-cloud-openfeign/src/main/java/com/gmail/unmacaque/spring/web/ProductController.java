@@ -1,12 +1,11 @@
 package com.gmail.unmacaque.spring.web;
 
-import java.util.List;
-
+import com.gmail.unmacaque.spring.domain.Product;
+import com.gmail.unmacaque.spring.domain.ProductClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gmail.unmacaque.spring.domain.Product;
-import com.gmail.unmacaque.spring.domain.ProductClient;
+import java.util.List;
 
 @RestController
 public class ProductController {

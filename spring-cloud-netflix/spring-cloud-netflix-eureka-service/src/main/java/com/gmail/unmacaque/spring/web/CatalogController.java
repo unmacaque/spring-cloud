@@ -1,14 +1,13 @@
 package com.gmail.unmacaque.spring.web;
 
-import java.math.BigDecimal;
-import java.util.Collections;
-import java.util.List;
-
+import com.gmail.unmacaque.spring.domain.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gmail.unmacaque.spring.domain.Product;
+import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.List;
 
 @RestController
 public class CatalogController {

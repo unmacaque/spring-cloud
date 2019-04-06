@@ -29,35 +29,35 @@ public class ApplicationTest {
 	@Test
 	public void getSupplier() throws Exception {
 		client.get()
-				.uri("/hello")
-				.exchange()
-				.expectStatus().isOk()
-				.expectBody(String.class).isEqualTo("Hello World")
-				.consumeWith(document("{method-name}"));
+			.uri("/hello")
+			.exchange()
+			.expectStatus().isOk()
+			.expectBody(String.class).isEqualTo("Hello World")
+			.consumeWith(document("{method-name}"));
 	}
 
 	@Test
 	public void postConsumer() throws Exception {
 		client.post()
-				.uri("/print")
-				.contentType(MediaType.TEXT_PLAIN)
-				.syncBody("Spring Cloud Function Web")
-				.exchange()
-				.expectStatus().isOk()
-				.expectBody()
-				.consumeWith(document("{method-name}"));
+			.uri("/print")
+			.contentType(MediaType.TEXT_PLAIN)
+			.syncBody("Spring Cloud Function Web")
+			.exchange()
+			.expectStatus().isOk()
+			.expectBody()
+			.consumeWith(document("{method-name}"));
 	}
 
 	@Test
 	public void postFunction() throws Exception {
 		client.post()
-				.uri("/uppercase")
-				.contentType(MediaType.TEXT_PLAIN)
-				.syncBody("Spring Cloud Function Web")
-				.exchange()
-				.expectStatus().isOk()
-				.expectBody(String.class).isEqualTo("SPRING CLOUD FUNCTION WEB")
-				.consumeWith(document("{method-name}"));
+			.uri("/uppercase")
+			.contentType(MediaType.TEXT_PLAIN)
+			.syncBody("Spring Cloud Function Web")
+			.exchange()
+			.expectStatus().isOk()
+			.expectBody(String.class).isEqualTo("SPRING CLOUD FUNCTION WEB")
+			.consumeWith(document("{method-name}"));
 	}
 
 }

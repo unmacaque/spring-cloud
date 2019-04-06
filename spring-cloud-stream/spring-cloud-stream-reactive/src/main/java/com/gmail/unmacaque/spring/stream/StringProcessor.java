@@ -6,7 +6,6 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
-
 import reactor.core.publisher.Flux;
 
 @Component
@@ -18,7 +17,7 @@ public class StringProcessor {
 	@SendTo(Processor.OUTPUT)
 	public Flux<String> transform(Flux<String> input) {
 		return input
-				.doOnNext(log::info)
-				.map(String::toUpperCase);
+			.doOnNext(log::info)
+			.map(String::toUpperCase);
 	}
 }

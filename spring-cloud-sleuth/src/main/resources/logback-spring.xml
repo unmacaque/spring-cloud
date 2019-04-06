@@ -1,9 +1,9 @@
 <configuration debug="false">
   <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-    <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
   </appender>
 
   <root level="info">
-    <appender-ref ref="stdout" />
+    <appender-ref ref="stdout"/>
   </root>
 </configuration>
