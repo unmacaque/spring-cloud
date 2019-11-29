@@ -57,6 +57,7 @@
         <extensions>true</extensions>
         <configuration>
           <baseClassForTests>com.gmail.unmacaque.spring.ApplicationTest</baseClassForTests>
+          <testFramework>JUNIT5</testFramework>
         </configuration>
       </plugin>
     </plugins>
