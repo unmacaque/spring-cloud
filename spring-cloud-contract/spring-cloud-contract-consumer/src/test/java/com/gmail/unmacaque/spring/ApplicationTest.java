@@ -23,7 +23,7 @@ class ApplicationTest {
 	@Test
 	void testContract() throws Exception {
 		mvc.perform(get("/hello"))
-			.andExpect(status().isOk())
-			.andExpect(content().string("Hello"));
+				.andExpect(status().isOk())
+				.andExpect(content().string("Hello"));
 	}
 }

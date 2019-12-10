@@ -21,7 +21,7 @@ class ProductControllerTest {
 	@Test
 	void testProducts() throws Exception {
 		mvc.perform(get("/products"))
-			.andExpect(status().isOk())
-			.andExpect(content().json("[]"));
+				.andExpect(status().isOk())
+				.andExpect(content().json("[]"));
 	}
 }

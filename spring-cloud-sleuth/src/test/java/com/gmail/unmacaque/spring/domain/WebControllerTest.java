@@ -20,6 +20,6 @@ class WebControllerTest {
 	@Test
 	void testProducts() throws Exception {
 		mvc.perform(get("/"))
-			.andExpect(status().isOk());
+				.andExpect(status().isOk());
 	}
 }
