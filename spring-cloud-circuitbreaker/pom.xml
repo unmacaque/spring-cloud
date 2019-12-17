@@ -15,5 +15,6 @@
 
   <modules>
     <module>spring-cloud-circuitbreaker-resilience4j</module>
+    <module>spring-cloud-circuitbreaker-resilience4j-reactor</module>
   </modules>
 </project>
