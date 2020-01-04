@@ -24,6 +24,7 @@
     <module>spring-cloud-config</module>
     <module>spring-cloud-contract</module>
     <module>spring-cloud-function</module>
+    <module>spring-cloud-gateway</module>
     <module>spring-cloud-netflix</module>
     <module>spring-cloud-openfeign</module>
     <module>spring-cloud-sleuth</module>
