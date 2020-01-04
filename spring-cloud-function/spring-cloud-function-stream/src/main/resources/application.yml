@@ -7,8 +7,8 @@ spring:
           group: group1
         output:
           destination: filtered
-      function:
-        definition: uppercase
+    function:
+      definition: uppercase
 
 logging:
   level:
