@@ -24,7 +24,7 @@ class ApplicationTest {
 	@Test
 	void messageIsProcessed() {
 		input.send(MessageBuilder.withPayload("it works").build());
-		String message = new String(output.receive().getPayload());
+		final String message = new String(output.receive().getPayload());
 		assertThat(message).isEqualTo("IT WORKS");
 	}
 

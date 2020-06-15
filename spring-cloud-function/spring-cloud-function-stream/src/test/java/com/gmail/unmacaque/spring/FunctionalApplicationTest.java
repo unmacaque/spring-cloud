@@ -17,7 +17,7 @@ class FunctionalApplicationTest {
 
 	@Test
 	void functionTest() {
-		Function<String, String> function = catalog.lookup(Function.class, "uppercase");
+		final Function<String, String> function = catalog.lookup(Function.class, "uppercase");
 		assertThat(function.apply("it works")).isEqualTo("IT WORKS");
 	}
 }

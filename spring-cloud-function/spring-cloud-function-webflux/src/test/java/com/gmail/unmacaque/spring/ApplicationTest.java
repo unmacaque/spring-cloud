@@ -22,7 +22,7 @@ class ApplicationTest {
 	private WebTestClient client;
 
 	@Test
-	void getSupplier() throws Exception {
+	void getSupplier() {
 		client.get()
 				.uri("/hello")
 				.exchange()
@@ -32,7 +32,7 @@ class ApplicationTest {
 	}
 
 	@Test
-	void postConsumer() throws Exception {
+	void postConsumer() {
 		client.post()
 				.uri("/print")
 				.contentType(MediaType.TEXT_PLAIN)
@@ -44,7 +44,7 @@ class ApplicationTest {
 	}
 
 	@Test
-	void postFunction() throws Exception {
+	void postFunction() {
 		client.post()
 				.uri("/uppercase")
 				.contentType(MediaType.TEXT_PLAIN)

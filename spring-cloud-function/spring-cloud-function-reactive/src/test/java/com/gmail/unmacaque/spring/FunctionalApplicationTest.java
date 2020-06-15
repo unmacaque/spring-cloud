@@ -20,7 +20,7 @@ class FunctionalApplicationTest {
 
 	@Test
 	void helloFunctionTest() {
-		Supplier<Mono<String>> function = catalog.lookup(Supplier.class, "hello");
+		final Supplier<Mono<String>> function = catalog.lookup(Supplier.class, "hello");
 		StepVerifier.create(function.get())
 				.expectNext("Hello World")
 				.verifyComplete();
@@ -28,7 +28,7 @@ class FunctionalApplicationTest {
 
 	@Test
 	void printFunctionTest() {
-		Consumer<Flux<String>> function = catalog.lookup(Function.class, "print");
+		final Consumer<Flux<String>> function = catalog.lookup(Function.class, "print");
 		StepVerifier.create(Flux.just(Flux.just("it works")).doOnNext(function))
 				.expectNextCount(1)
 				.verifyComplete();
@@ -36,7 +36,7 @@ class FunctionalApplicationTest {
 
 	@Test
 	void uppercaseFunctionTest() {
-		Function<Flux<String>, Mono<String>> function = catalog.lookup(Function.class, "uppercase");
+		final Function<Flux<String>, Mono<String>> function = catalog.lookup(Function.class, "uppercase");
 		StepVerifier.create(function.apply(Flux.just("it works")))
 				.expectNext("IT WORKS")
 				.verifyComplete();

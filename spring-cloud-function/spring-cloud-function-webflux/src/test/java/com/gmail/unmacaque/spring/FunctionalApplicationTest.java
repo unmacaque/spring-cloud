@@ -20,19 +20,19 @@ class FunctionalApplicationTest {
 
 	@Test
 	void helloFunctionTest() {
-		Supplier<String> function = catalog.lookup(Supplier.class, "hello");
+		final Supplier<String> function = catalog.lookup(Supplier.class, "hello");
 		assertThat(function.get()).isEqualTo("Hello World");
 	}
 
 	@Test
 	void printFunctionTest() {
-		Consumer<String> function = catalog.lookup(Supplier.class, "print");
+		final Consumer<String> function = catalog.lookup(Supplier.class, "print");
 		assertThatCode(() -> function.accept("Hello")).doesNotThrowAnyException();
 	}
 
 	@Test
 	void uppercaseFunctionTest() {
-		Function<String, String> function = catalog.lookup(Function.class, "uppercase");
+		final Function<String, String> function = catalog.lookup(Function.class, "uppercase");
 		assertThat(function.apply("it works")).isEqualTo("IT WORKS");
 	}
 }

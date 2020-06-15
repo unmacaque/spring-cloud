@@ -22,7 +22,8 @@ class ApplicationTest {
 	@Test
 	void messageIsProcessed() {
 		processor.input().send(MessageBuilder.withPayload("it works").build());
-		Message<?> received = messageCollector.forChannel(processor.output()).poll();
+		final Message<?> received = messageCollector.forChannel(processor.output()).poll();
+		assertThat(received).isNotNull();
 		assertThat(received.getPayload()).isEqualTo("IT WORKS");
 	}
 

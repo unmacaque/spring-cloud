@@ -23,7 +23,7 @@ public class CatalogController {
 	}
 
 	private Product createProduct() {
-		Product product = new Product();
+		final Product product = new Product();
 		product.setProductId(1);
 		product.setName("Samsung Smart TV");
 		product.setDescription("Watch TV in brilliant quality");
