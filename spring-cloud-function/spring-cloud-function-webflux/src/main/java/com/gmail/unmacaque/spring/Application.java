@@ -3,6 +3,8 @@ package com.gmail.unmacaque.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -16,17 +18,17 @@ public class Application {
 	}
 
 	@Bean
-	public Supplier<String> hello() {
-		return () -> "Hello World";
+	public Supplier<Mono<String>> hello() {
+		return () -> Mono.just("Hello World");
 	}
 
 	@Bean
-	public Consumer<String> print() {
-		return System.out::println;
+	public Consumer<Flux<String>> print() {
+		return flux -> flux.subscribe(System.out::println);
 	}
 
 	@Bean
-	public Function<String, String> uppercase() {
-		return String::toUpperCase;
+	public Function<Flux<String>, Mono<String>> uppercase() {
+		return flux -> flux.next().map(String::toUpperCase);
 	}
 }

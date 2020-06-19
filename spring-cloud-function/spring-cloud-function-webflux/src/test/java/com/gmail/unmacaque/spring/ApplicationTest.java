@@ -48,6 +48,7 @@ class ApplicationTest {
 		client.post()
 				.uri("/uppercase")
 				.contentType(MediaType.TEXT_PLAIN)
+				.accept(MediaType.TEXT_PLAIN)
 				.bodyValue("Spring Cloud Function Web")
 				.exchange()
 				.expectStatus().isOk()
