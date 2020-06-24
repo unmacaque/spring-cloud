@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>spring-cloud-function-webflux</artifactId>
   <name>Spring Cloud Function WebFlux</name>
-  <url>https://bitbucket.org/unmacaque/spring-cloud</url>
+  <url>https://github.com/unmacaque/spring-cloud</url>
   <packaging>jar</packaging>
 
   <parent>

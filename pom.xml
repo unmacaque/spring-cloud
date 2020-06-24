@@ -6,7 +6,7 @@
   <artifactId>spring-cloud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Spring Cloud</name>
-  <url>https://bitbucket.org/unmacaque/spring-cloud</url>
+  <url>https://github.com/unmacaque/spring-cloud</url>
   <packaging>pom</packaging>
 
   <properties>
