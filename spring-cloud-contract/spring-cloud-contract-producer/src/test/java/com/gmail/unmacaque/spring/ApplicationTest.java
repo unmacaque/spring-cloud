@@ -2,21 +2,30 @@ package com.gmail.unmacaque.spring;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.restdocs.RestDocumentationContextProvider;
+import org.springframework.restdocs.RestDocumentationExtension;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
-@SpringBootTest(webEnvironment = WebEnvironment.MOCK)
-@AutoConfigureMockMvc
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+
+@SpringBootTest
+@ExtendWith(RestDocumentationExtension.class)
 abstract class ApplicationTest {
 
 	@Autowired
-	private MockMvc mvc;
+	private WebApplicationContext context;
 
 	@BeforeEach
-	void before() {
-		RestAssuredMockMvc.mockMvc(mvc);
+	void before(RestDocumentationContextProvider restDocumentation) {
+		RestAssuredMockMvc
+				.mockMvc(MockMvcBuilders.webAppContextSetup(context)
+						.apply(documentationConfiguration(restDocumentation))
+						.alwaysDo(document("{class-name}_{method-name}"))
+						.build());
 	}
 }
