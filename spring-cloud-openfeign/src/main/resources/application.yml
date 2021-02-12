@@ -3,5 +3,5 @@ spring:
     name: openfeign-client
 
 feign:
-  hystrix:
+  circuitbreaker:
     enabled: true

@@ -10,7 +10,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT, properties = {"endpoint=http://localhost:${wiremock.server.port}"})
-@AutoConfigureWireMock
+@AutoConfigureWireMock(port = 0)
 class ApplicationTest {
 
 	@LocalServerPort
