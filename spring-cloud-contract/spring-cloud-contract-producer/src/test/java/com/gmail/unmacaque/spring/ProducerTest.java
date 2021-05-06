@@ -15,7 +15,7 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 
 @SpringBootTest
 @ExtendWith(RestDocumentationExtension.class)
-abstract class ApplicationTest {
+abstract class ProducerTest {
 
 	@Autowired
 	private WebApplicationContext context;

@@ -1,0 +1,42 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.cloud.contract' version '3.0.2' apply false
+}
+
+allprojects {
+    group = 'com.gmail.unmacaque'
+    version = '0.0.1-SNAPSHOT'
+}
+
+def javaProjects() {
+    subprojects.findAll {new File(it.projectDir, 'src').exists() }
+}
+
+configure(javaProjects()) {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:2020.0.2'
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
