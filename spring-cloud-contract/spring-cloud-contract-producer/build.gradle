@@ -1,3 +1,8 @@
+plugins {
+    id 'unmacaque.spring-cloud'
+    id 'org.springframework.cloud.contract'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -13,10 +18,6 @@ configurations {
         canBeConsumed = true
         canBeResolved = false
     }
-}
-
-buildscript {
-    apply plugin: 'org.springframework.cloud.contract'
 }
 
 contracts {

@@ -1,0 +1,18 @@
+plugins {
+    id 'org.springframework.cloud.contract'
+}
+
+configurations {
+    stubsJar {
+        canBeConsumed = true
+        canBeResolved = false
+    }
+}
+
+contracts {
+    testFramework = 'JUNIT5'
+}
+
+artifacts {
+    stubsJar(verifierStubsJar)
+}
