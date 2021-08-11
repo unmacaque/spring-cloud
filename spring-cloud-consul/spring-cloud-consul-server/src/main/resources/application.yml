@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-cloud-consul-server
+
+management:
+  server:
+    port: 8280
+
+server:
+  port: 8180
