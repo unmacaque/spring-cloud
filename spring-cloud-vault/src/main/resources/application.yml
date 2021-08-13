@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-cloud-vault
+  cloud:
+    vault:
+      scheme: http
+  config:
+    import: vault://
