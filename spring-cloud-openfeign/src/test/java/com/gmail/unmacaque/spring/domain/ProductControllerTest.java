@@ -20,8 +20,10 @@ class ProductControllerTest {
 	@Test
 	void testProducts() throws Exception {
 		mvc.perform(get("/products"))
-				.andExpect(status().isOk())
-				.andExpect(jsonPath("$").isArray())
-				.andExpect(jsonPath("$.length()").value(0));
+				.andExpectAll(
+						status().isOk(),
+						jsonPath("$").isArray(),
+						jsonPath("$.length()").value(0)
+				);
 	}
 }

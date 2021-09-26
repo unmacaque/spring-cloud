@@ -22,15 +22,19 @@ class ServerControllerTest {
 	@Test
 	void testGetProducts() throws Exception {
 		mvc.perform(get("/products"))
-				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.length()").value(1));
+				.andExpectAll(
+						status().isOk(),
+						jsonPath("$.length()").value(1)
+				);
 	}
 
 	@Test
 	void testGetProductById() throws Exception {
 		mvc.perform(get("/products/1"))
-				.andExpect(status().isOk())
-				.andExpect(jsonPath("$.productId").value("1"));
+				.andExpectAll(
+						status().isOk(),
+						jsonPath("$.productId").value("1")
+				);
 	}
 
 	@Test

@@ -25,7 +25,7 @@ class ApplicationTest {
 	@Test
 	void testHelloWithFault() throws Exception {
 		mvc.perform(get("/")
-				.header("X-Provoke-Fault", "1"))
+						.header("X-Provoke-Fault", "1"))
 				.andExpect(content().string("fallback"));
 	}
 

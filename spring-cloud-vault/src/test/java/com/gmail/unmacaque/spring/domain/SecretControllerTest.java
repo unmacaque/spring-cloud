@@ -20,7 +20,9 @@ class SecretControllerTest {
 	@Test
 	void contextLoads() throws Exception {
 		mvc.perform(get("/"))
-				.andExpect(status().isOk())
-				.andExpect(content().string("test"));
+				.andExpectAll(
+						status().isOk(),
+						content().string("test")
+				);
 	}
 }
