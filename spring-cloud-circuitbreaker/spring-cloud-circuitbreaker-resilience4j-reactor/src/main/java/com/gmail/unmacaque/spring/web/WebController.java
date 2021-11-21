@@ -7,13 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RestController
-public class WebController {
-
-	private final ReactiveCircuitBreakerFactory<?, ?> cbFactory;
-
-	public WebController(ReactiveCircuitBreakerFactory<?, ?> cbFactory) {
-		this.cbFactory = cbFactory;
-	}
+public record WebController(ReactiveCircuitBreakerFactory<?, ?> cbFactory) {
 
 	@GetMapping("/")
 	public Mono<String> hello(@RequestHeader(value = "X-Provoke-Fault", required = false) boolean fault) {

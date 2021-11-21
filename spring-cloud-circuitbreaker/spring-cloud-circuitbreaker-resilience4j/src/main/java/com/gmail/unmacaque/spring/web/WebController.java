@@ -6,13 +6,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class WebController {
-
-	private final CircuitBreakerFactory<?, ?> cbFactory;
-
-	public WebController(CircuitBreakerFactory<?, ?> cbFactory) {
-		this.cbFactory = cbFactory;
-	}
+public record WebController(CircuitBreakerFactory<?, ?> cbFactory) {
 
 	@GetMapping("/")
 	public String hello(@RequestHeader(value = "X-Provoke-Fault", required = false) boolean fault) {

@@ -8,13 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ProductController {
-
-	private final ProductClient productClient;
-
-	public ProductController(ProductClient productClient) {
-		this.productClient = productClient;
-	}
+public record ProductController(ProductClient productClient) {
 
 	@GetMapping("/products")
 	public List<Product> products() {
