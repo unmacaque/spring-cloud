@@ -1,0 +1,13 @@
+plugins {
+    id 'unmacaque.spring-cloud'
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-function-rsocket'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+description = 'Spring Cloud Function RSocket'
