@@ -1,7 +1,7 @@
 spring:
   application:
     name: openfeign-client
-
-feign:
-  circuitbreaker:
-    enabled: true
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
