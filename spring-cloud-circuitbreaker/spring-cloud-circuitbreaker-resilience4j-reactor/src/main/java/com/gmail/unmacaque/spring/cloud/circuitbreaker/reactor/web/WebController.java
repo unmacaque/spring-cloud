@@ -1,5 +1,6 @@
 package com.gmail.unmacaque.spring.cloud.circuitbreaker.reactor.web;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.circuitbreaker.ReactiveCircuitBreakerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -7,7 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
 @RestController
-public record WebController(ReactiveCircuitBreakerFactory<?, ?> cbFactory) {
+public class WebController {
+
+	@Autowired
+	private ReactiveCircuitBreakerFactory<?, ?> cbFactory;
 
 	@GetMapping("/")
 	public Mono<String> hello(@RequestHeader(value = "X-Provoke-Fault", required = false) boolean fault) {
