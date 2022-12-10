@@ -3,11 +3,15 @@ plugins {
 }
 
 dependencies {
+    implementation platform('org.testcontainers:testcontainers-bom:1.17.6')
+
     implementation 'org.springframework.cloud:spring-cloud-vault-config'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:junit-jupiter'
+    testImplementation 'org.testcontainers:vault'
 }
 
 description = 'Spring Cloud Vault'
