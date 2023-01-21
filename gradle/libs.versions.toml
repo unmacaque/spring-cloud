@@ -1,0 +1,5 @@
+[versions]
+testcontainers = "1.17.6"
+
+[libraries]
+testcontainers-bom = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers" }
