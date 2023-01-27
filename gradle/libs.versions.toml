@@ -1,5 +1,5 @@
 [versions]
-springCloud = "2022.0.0"
+springCloud = "2022.0.1"
 testcontainers = "1.17.6"
 
 [libraries]
