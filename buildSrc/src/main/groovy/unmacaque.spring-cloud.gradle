@@ -23,3 +23,9 @@ sourceSets {
         }
     }
 }
+
+tasks.register('integrationTest', Test) {
+    testClassesDirs = sourceSets.integration.output.classesDirs
+    classpath = sourceSets.integration.runtimeClasspath
+    useJUnitPlatform()
+}
