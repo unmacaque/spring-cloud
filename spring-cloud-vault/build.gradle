@@ -10,8 +10,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.testcontainers:junit-jupiter'
-    testImplementation 'org.testcontainers:vault'
+    integrationImplementation 'org.testcontainers:junit-jupiter'
+    integrationImplementation 'org.testcontainers:vault'
 }
 
 description = 'Spring Cloud Vault'
