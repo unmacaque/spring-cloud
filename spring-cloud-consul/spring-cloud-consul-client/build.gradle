@@ -3,8 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation platform(libs.testcontainers.bom)
-
     implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
     implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
     implementation 'org.springframework.boot:spring-boot-starter-web'

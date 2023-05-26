@@ -1,6 +1,2 @@
 [versions]
-springCloud = "2022.0.2"
-testcontainers = "1.18.0"
-
-[libraries]
-testcontainers-bom = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers" }
+springCloud = "2022.0.3"
