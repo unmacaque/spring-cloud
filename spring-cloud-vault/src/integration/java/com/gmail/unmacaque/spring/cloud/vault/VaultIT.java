@@ -24,7 +24,7 @@ class VaultIT {
 	@Container
 	private static final VaultContainer<?> vaultContainer = new VaultContainer<>("vault:latest")
 			.withVaultToken(VAULT_TOKEN)
-			.withSecretInVault("secret/spring-cloud-vault", "foo=test");
+			.withInitCommand("kv put --mount=secret spring-cloud-vault foo=test");
 
 	@Test
 	void testGet() throws Exception {
