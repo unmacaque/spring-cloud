@@ -1,0 +1,11 @@
+[versions]
+dependencyManagement = "1.1.0"
+springBoot = "3.1.0"
+springCloudContract = "4.0.2"
+
+[libraries]
+dependencyManagement = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependencyManagement" }
+
+springBoot = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }
+
+springCloudContract = { module = "org.springframework.cloud:spring-cloud-contract-gradle-plugin", version.ref = "springCloudContract" }
