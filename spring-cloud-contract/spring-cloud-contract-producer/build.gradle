@@ -22,6 +22,7 @@ configurations {
 
 contracts {
     testFramework = 'JUNIT5'
+    packageWithBaseClasses 'com.gmail.unmacaque.spring.cloud.contract.producer'
 }
 
 artifacts {
