@@ -1,16 +1,7 @@
 package com.gmail.unmacaque.spring.cloud.gateway.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
-@ConfigurationProperties
-public class GatewayProperties {
-	private String endpoint = "http://localhost:8888";
-
-	public String getEndpoint() {
-		return endpoint;
-	}
-
-	public void setEndpoint(String endpoint) {
-		this.endpoint = endpoint;
-	}
-}
+@ConfigurationProperties("gateway")
+public record GatewayProperties(@DefaultValue("http://localhost:8888") String endpoint) {}

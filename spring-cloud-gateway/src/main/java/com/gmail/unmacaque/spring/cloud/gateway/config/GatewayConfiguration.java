@@ -13,7 +13,7 @@ public class GatewayConfiguration {
 	@Bean
 	public RouteLocator routeLocator(RouteLocatorBuilder builder, GatewayProperties properties) {
 		return builder.routes()
-				.route("api", p -> p.path("/api").uri(properties.getEndpoint()))
+				.route("api", p -> p.path("/api").uri(properties.endpoint()))
 				.build();
 	}
 
