@@ -3,4 +3,5 @@ spring:
     stream:
       binders:
         integration:
+          type: integration
           defaultCandidate: true
