@@ -7,7 +7,7 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
-    testImplementation(projects.springCloudContract.springCloudContractProducer) {
+    testImplementation(projects.projects.contract.producer) {
         targetConfiguration = 'stubsJar'
     }
 }
