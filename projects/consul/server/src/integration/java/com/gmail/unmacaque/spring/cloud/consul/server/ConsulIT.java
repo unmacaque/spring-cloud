@@ -11,7 +11,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 class ConsulIT {
 
 	@Container
-	private static final ConsulContainer consulContainer = new ConsulContainer("consul:latest")
+	private static final ConsulContainer consulContainer = new ConsulContainer("hashicorp/consul:latest")
 			.withConsulCommand();
 
 	@Test

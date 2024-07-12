@@ -24,7 +24,7 @@ class VaultIT {
 
 	@SuppressWarnings("resource")
 	@Container
-	private static final VaultContainer<?> vaultContainer = new VaultContainer<>("vault:latest")
+	private static final VaultContainer<?> vaultContainer = new VaultContainer<>("hashicorp/vault:latest")
 			.withVaultToken(VAULT_TOKEN)
 			.withInitCommand("kv put --mount=secret spring-cloud-vault foo=test");
 
