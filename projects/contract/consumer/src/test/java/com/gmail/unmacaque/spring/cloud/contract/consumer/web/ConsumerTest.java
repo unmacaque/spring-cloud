@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@AutoConfigureStubRunner(ids = ":spring-cloud-contract-producer")
+@AutoConfigureStubRunner(ids = ":producer")
 @AutoConfigureMockMvc
 class ConsumerTest {
 
@@ -24,7 +24,7 @@ class ConsumerTest {
 	@Autowired
 	private ConsumerController consumerController;
 
-	@StubRunnerPort("spring-cloud-contract-producer")
+	@StubRunnerPort("producer")
 	private int producerPort;
 
 	@BeforeEach
