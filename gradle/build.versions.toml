@@ -1,7 +1,7 @@
 [versions]
-dependencyManagement = "1.1.5"
-springBoot = "3.3.1"
-springCloudContract = "4.1.4"
+dependencyManagement = "1.1.7"
+springBoot = "3.4.1"
+springCloudContract = "4.2.0"
 
 [libraries]
 dependencyManagement = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependencyManagement" }
