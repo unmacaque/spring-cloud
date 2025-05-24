@@ -1,6 +1,6 @@
 [versions]
 dependencyManagement = "1.1.7"
-springBoot = "3.4.1"
+springBoot = "3.4.6"
 springCloudContract = "4.2.0"
 
 [libraries]
