@@ -1,0 +1,17 @@
+plugins {
+    id 'unmacaque.spring-cloud'
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-kubernetes-client-config'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    testAndDevelopmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+description = 'Spring Cloud Kubernetes'
+
+tasks.named("bootBuildImage") {
+    imageName.set('docker.io/unmacaque/spring-cloud-kubernetes')
+}

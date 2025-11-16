@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-cloud-k8s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+---
+spring:
+  config:
+    activate:
+      on-profile: kubernetes
+    import: "kubernetes:"
