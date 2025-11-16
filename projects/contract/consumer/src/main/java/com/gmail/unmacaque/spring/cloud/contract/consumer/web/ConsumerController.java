@@ -10,9 +10,8 @@ import java.net.URI;
 @RestController
 public class ConsumerController {
 
-	private int port;
-
 	private final RestTemplate restTemplate;
+	private int port;
 
 	public ConsumerController(RestTemplateBuilder restTemplateBuilder) {
 		this.restTemplate = restTemplateBuilder.build();
