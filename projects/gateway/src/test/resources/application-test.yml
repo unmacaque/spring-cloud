@@ -1,0 +1,2 @@
+gateway:
+  endpoint: http://localhost:${wiremock.server.port}

@@ -1,29 +1,29 @@
 package com.gmail.unmacaque.spring.cloud.gateway;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.wiremock.spring.EnableWireMock;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest(webEnvironment = RANDOM_PORT, properties = {"gateway.endpoint=http://localhost:${wiremock.server.port}"})
-@AutoConfigureWireMock(port = 0)
+@SpringBootTest
+@AutoConfigureWebTestClient
+@EnableWireMock
+@ActiveProfiles("test")
 class ApplicationTest {
 
-	@LocalServerPort
-	private int port;
+	@Autowired
+	private WebTestClient webTestClient;
 
 	@Test
 	void testRouteApi() {
 		stubFor(get("/api").willReturn(aResponse().withBody("Api called!")));
 
-		WebTestClient
-				.bindToServer()
-				.baseUrl("http://localhost:" + port)
-				.build()
+		webTestClient
 				.get()
 				.uri("/api")
 				.exchange()

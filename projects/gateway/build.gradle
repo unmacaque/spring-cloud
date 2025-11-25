@@ -9,7 +9,8 @@ dependencies {
     implementation 'io.github.resilience4j:resilience4j-micrometer'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
+    testImplementation libs.wiremock.standalone
+    testImplementation libs.wiremock.integrations.springBoot
 }
 
 description = 'Spring Cloud Gateway'
