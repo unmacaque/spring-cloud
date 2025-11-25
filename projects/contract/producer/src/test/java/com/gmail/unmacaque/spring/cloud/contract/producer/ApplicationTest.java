@@ -1,11 +1,9 @@
-package com.gmail.unmacaque.spring.cloud.consul.server;
+package com.gmail.unmacaque.spring.cloud.contract.producer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@ActiveProfiles("test")
 class ApplicationTest {
 
 	@Test

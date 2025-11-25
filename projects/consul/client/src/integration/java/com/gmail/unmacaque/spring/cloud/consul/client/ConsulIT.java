@@ -14,6 +14,6 @@ class ConsulIT {
 	private static final ConsulContainer consulContainer = new ConsulContainer("hashicorp/consul:latest");
 
 	@Test
-	void testContextLoads() {}
+	void contextLoads() {}
 
 }

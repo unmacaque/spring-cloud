@@ -1,4 +1,4 @@
-package com.gmail.unmacaque.spring.cloud.vault.domain;
+package com.gmail.unmacaque.spring.cloud.vault;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class SecretControllerTest {
+class ApplicationTest {
 
 	@Autowired
 	private MockMvc mvc;

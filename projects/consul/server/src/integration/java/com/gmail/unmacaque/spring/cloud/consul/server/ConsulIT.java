@@ -15,6 +15,6 @@ class ConsulIT {
 			.withConsulCommand();
 
 	@Test
-	void testContextLoads() {}
+	void contextLoads() {}
 
 }
