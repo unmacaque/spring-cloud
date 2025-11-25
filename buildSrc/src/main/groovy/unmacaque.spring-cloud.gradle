@@ -4,6 +4,15 @@ plugins {
     id 'io.spring.dependency-management'
 }
 
+sourceSets {
+    integration {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+        }
+    }
+}
+
 configurations {
     integrationImplementation.extendsFrom testImplementation
     integrationRuntimeOnly.extendsFrom runtimeOnly, testRuntimeOnly
@@ -12,15 +21,6 @@ configurations {
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${libs.versions.springCloud.get()}"
-    }
-}
-
-sourceSets {
-    integration {
-        java {
-            compileClasspath += main.output + test.output
-            runtimeClasspath += main.output + test.output
-        }
     }
 }
 
