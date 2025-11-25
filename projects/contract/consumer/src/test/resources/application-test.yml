@@ -1,0 +1,2 @@
+client:
+  base-url: http://localhost:${stubrunner.runningstubs.producer.port}
