@@ -6,6 +6,7 @@ dependencies {
     implementation buildLibs.springBoot
     implementation buildLibs.dependencyManagement
     implementation buildLibs.springCloudContract
+    implementation buildLibs.openrewrite
 }
 
 repositories {
