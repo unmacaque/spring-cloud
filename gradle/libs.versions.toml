@@ -1,6 +1,6 @@
 [versions]
 openrewrite = "6.19.0"
-springCloud = "2025.0.0"
+springCloud = "2025.1.0"
 wiremock = "3.13.1"
 wiremockIntegrations = "4.0.6"
 
