@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 class RestClientConfiguration {
 
 	@Bean
-	public RestClientCustomizer restClientCustomizer(RestClientProperties properties) {
+	RestClientCustomizer restClientCustomizer(RestClientProperties properties) {
 		return builder -> builder.baseUrl(properties.baseUrl());
 	}
 

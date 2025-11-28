@@ -22,17 +22,17 @@ public class Application {
 	}
 
 	@Bean
-	public Supplier<Mono<String>> hello() {
+	Supplier<Mono<String>> hello() {
 		return () -> Mono.just("Hello World");
 	}
 
 	@Bean
-	public Consumer<Flux<String>> print() {
+	Consumer<Flux<String>> print() {
 		return flux -> flux.subscribe(logger::info);
 	}
 
 	@Bean
-	public Function<Flux<String>, Mono<String>> uppercase() {
+	Function<Flux<String>, Mono<String>> uppercase() {
 		return flux -> flux.next().map(String::toUpperCase);
 	}
 }

@@ -14,7 +14,7 @@ public class Application {
 	}
 
 	@Bean
-	public Function<String, String> uppercase() {
+	Function<String, String> uppercase() {
 		return String::toUpperCase;
 	}
 }

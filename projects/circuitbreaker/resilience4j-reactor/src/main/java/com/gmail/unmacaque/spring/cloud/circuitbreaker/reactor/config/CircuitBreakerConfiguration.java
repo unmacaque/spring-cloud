@@ -14,7 +14,7 @@ import java.time.Duration;
 public class CircuitBreakerConfiguration {
 
 	@Bean
-	public Customizer<ReactiveResilience4JCircuitBreakerFactory> customizer() {
+	Customizer<ReactiveResilience4JCircuitBreakerFactory> customizer() {
 		return factory -> factory
 				.configureDefault(id -> new Resilience4JConfigBuilder(id)
 						.circuitBreakerConfig(CircuitBreakerConfig

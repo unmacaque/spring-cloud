@@ -11,7 +11,7 @@ public class CloudConfiguration {
 
 	@Bean
 	@LoadBalanced
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+	RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}
 }

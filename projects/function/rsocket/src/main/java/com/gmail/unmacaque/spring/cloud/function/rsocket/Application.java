@@ -14,12 +14,12 @@ public class Application {
 	}
 
 	@Bean
-	public Function<String, String> lowercase() {
+	Function<String, String> lowercase() {
 		return String::toLowerCase;
 	}
 
 	@Bean
-	public Function<String, String> uppercase() {
+	Function<String, String> uppercase() {
 		return String::toUpperCase;
 	}
 }
