@@ -1,11 +1,8 @@
 [versions]
 dependencyManagement = "1.1.7"
-openrewrite = "7.21.0"
 springBoot = "4.0.0"
 
 [libraries]
 dependencyManagement = { module = "io.spring.gradle:dependency-management-plugin", version.ref = "dependencyManagement" }
-
-openrewrite = { module = "org.openrewrite.rewrite:org.openrewrite.rewrite.gradle.plugin", version.ref = "openrewrite" }
 
 springBoot = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBoot" }

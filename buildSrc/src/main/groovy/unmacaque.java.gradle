@@ -1,21 +1,10 @@
 plugins {
     id 'java'
-    id 'org.openrewrite.rewrite'
 }
 
 repositories {
     mavenLocal()
     mavenCentral()
-}
-
-rewrite {
-    activeRecipe('com.gmail.unmacaque.Rewrite')
-
-    configFile("${project.rootDir}/rewrite.yml")
-}
-
-dependencies {
-    rewrite libs.openrewrite.spring
 }
 
 java {

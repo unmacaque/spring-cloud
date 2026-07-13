@@ -5,7 +5,6 @@ plugins {
 dependencies {
     implementation buildLibs.springBoot
     implementation buildLibs.dependencyManagement
-    implementation buildLibs.openrewrite
 }
 
 repositories {
