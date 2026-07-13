@@ -1,9 +1,6 @@
 [versions]
 springCloud = "2025.1.2"
-wiremock = "3.13.1"
-wiremockIntegrations = "4.0.6"
+wiremockIntegrations = "4.0.9"
 
 [libraries]
-wiremock-standalone = { module = "org.wiremock:wiremock-standalone", version.ref = "wiremock" }
-
 wiremock-integrations-springBoot = { module = "org.wiremock.integrations:wiremock-spring-boot", version.ref = "wiremockIntegrations" }
