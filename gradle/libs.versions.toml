@@ -1,5 +1,5 @@
 [versions]
-springCloud = "2025.1.0"
+springCloud = "2025.1.2"
 wiremock = "3.13.1"
 wiremockIntegrations = "4.0.6"
 
